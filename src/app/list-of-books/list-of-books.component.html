@@ -16,7 +16,7 @@
                     <td>{{ book.year }}</td>
                     <td>{{ book.isReaded }}</td>
                     <td class="actionsContainer">
-                        <a href="" [routerLink]="['/edit', book.id]">Atnaujinti informaciją</a>
+                        <a href="" [routerLink]="['/books', book.id]">Atnaujinti informaciją</a>
                         <button class="btn deleteBtn" (click)="deleteRecord(book.id || null)">Ištrinti</button>
                     </td>
                 </tr>

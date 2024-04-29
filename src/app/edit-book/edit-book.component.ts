@@ -38,7 +38,7 @@ export class EditBookComponent {
         isReaded: this.isReaded,
       }
       this.bookService.updateRecord(record).subscribe(()=>{
-        this.router.navigate(['listOfBooks']);
+        this.router.navigate(['books']);
       })
     }
   }
