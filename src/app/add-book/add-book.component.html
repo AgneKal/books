@@ -5,9 +5,9 @@
         <input type="text" placeholder="Pavadinimas" [(ngModel)]="title">
         <input type="number" placeholder="Išleidimo metai" [(ngModel)]="year">
         <select name="" id="" [(ngModel)]="isReaded">
-            <option value="yes" disabled selected>Ar knyga perskaityta?</option>
-            <option value="yes">Taip</option>
-            <option value="no">Ne</option>
+            <option value="" disabled selected>Ar knyga perskaityta?</option>
+            <option value="Taip">Taip</option>
+            <option value="Ne">Ne</option>
         </select>
     </div>
     <button class="btn addBookBtn" (click)="addBook()" [disabled]="author == null || title == null || year == null || isReaded == null">Įtraukti knygą</button>
