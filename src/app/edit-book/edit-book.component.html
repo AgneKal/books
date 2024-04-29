@@ -1,0 +1,17 @@
+<div class="sectionMainContainer">
+    <div class="sectionName">Informacija apie knygą</div>
+    <div class="bookInfo">
+        <label for="">Autorius:</label>
+        <input type="text" [(ngModel)]="author">
+        <label for="">Pavadinimas:</label>
+        <input type="text" [(ngModel)]="title">
+        <label for="">Išleidimo metai:</label>
+        <input type="number" [(ngModel)]="year">
+        <label for="">Ar knyga perskaityta?</label>
+        <select name="" id="" [(ngModel)]="isReaded">
+            <option value="yes">Taip</option>
+            <option value="no">Ne</option>
+        </select>
+    </div>
+    <button class="btn updateBookBtn" (click)="updateRecord()">Atnaujinti informaciją</button>
+</div>

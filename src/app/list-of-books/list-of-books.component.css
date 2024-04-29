@@ -1,0 +1,51 @@
+.actionsContainer a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 4px 8px;
+    border: none;
+    border: 1px solid #4b0e0e;
+    border-radius: 6px;
+    background-color: #4b0e0e;
+    color: #e6e6e6;
+    cursor: pointer;
+    
+}
+
+.actionsContainer a:hover {
+    background-color: #e6e6e6;
+    color: #4b0e0e;
+}
+
+.actionsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+table {
+    font-size: 24px;
+    border-collapse: collapse;
+    
+}
+
+th {
+    min-width: 240px;
+    border-bottom: 2px solid #4b0e0e;
+    padding-bottom: 5px;
+    color: #4b0e0e;
+}
+
+tr {
+    border-bottom: 1px solid #4b0e0e;
+}
+
+td {
+    min-width: 240px;
+    padding: 4px 8px;
+}
+
+.italic {
+    font-style: italic;
+}

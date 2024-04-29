@@ -1,0 +1,11 @@
+.addBookBtn {
+    margin-top: 20px;
+}
+
+.addBookBtn:disabled {
+    background-color: #7c2f2f;
+    border: 1px solid #7c2f2f;
+    color: #e6e6e6;
+    cursor:default;
+
+}
