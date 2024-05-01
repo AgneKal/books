@@ -105,3 +105,8 @@ select {
 select:focus {
     outline: none;
 }
+
+.error {
+    margin-top: 40px;
+    color: #4b0e0e;
+}

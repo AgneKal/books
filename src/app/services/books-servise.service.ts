@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Book } from '../models/book';
+import { map, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,18 @@ public books: Book[] = [];
   }
 
   public loadData() {
-    return this.http.get<{[key:string]: Book}>("https://books-mybooks-default-rtdb.europe-west1.firebasedatabase.app/books.json");
+    return this.http
+      .get<{[key:string]: Book}>("https://books-mybooks-default-rtdb.europe-west1.firebasedatabase.app/books.json")
+      .pipe(
+        map( (data):Book[] => {
+          let books = [];
+          for(let x in data) {
+            books.push ({...data[x], id:x});
+          }
+          this.books = books;
+          return books;
+        })
+      );
   }
 
   public loadRecord(id:string) {

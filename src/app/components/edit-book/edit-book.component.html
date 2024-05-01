@@ -1,0 +1,21 @@
+<section>
+    <app-loading *ngIf="isLoading"></app-loading>
+    <div class="sectionName error" *ngIf="isError">Klaida!</div>
+    <div class="sectionMainContainer" *ngIf="!isError && !isLoading">
+        <div class="sectionName">Informacija apie knygą</div>
+        <div class="bookInfo">
+            <label for="">Autorius:</label>
+            <input type="text" [(ngModel)]="author">
+            <label for="">Pavadinimas:</label>
+            <input type="text" [(ngModel)]="title">
+            <label for="">Išleidimo metai:</label>
+            <input type="number" [(ngModel)]="year">
+            <label for="">Ar knyga perskaityta?</label>
+            <select name="" id="" [(ngModel)]="isReaded">
+                <option value="Taip">Taip</option>
+                <option value="Ne">Ne</option>
+            </select>
+        </div>
+        <button class="btn updateBookBtn" (click)="updateRecord()">Atnaujinti informaciją</button>
+    </div>
+</section>

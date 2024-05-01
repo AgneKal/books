@@ -1,0 +1,30 @@
+<section>
+    <app-loading *ngIf="isLoading"></app-loading>
+    <div class="sectionName error" *ngIf="isError">Klaida!</div>
+    <div class="sectionMainContainer" *ngIf="!isError && !isLoading">
+        <div class="sectionName">Knygų sąrašas</div>
+        <div class="booksList">
+            <table class="books">
+                <thead>
+                    <th>Autorius</th>
+                    <th>Pavadinimas</th>
+                    <th>Išleidimo metai</th>
+                    <th>Ar skaityta?</th>
+                    <th>Veiksmai</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of books">
+                        <td class="italic">{{ book.author }}</td>
+                        <td>{{ book.title }}</td>
+                        <td>{{ book.year }}</td>
+                        <td>{{ book.isReaded }}</td>
+                        <td class="actionsContainer">
+                            <a href="" [routerLink]="['/books', book.id]">Atnaujinti informaciją</a>
+                            <button class="btn deleteBtn" (click)="deleteRecord(book.id || null)">Ištrinti</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

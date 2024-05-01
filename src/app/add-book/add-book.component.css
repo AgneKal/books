@@ -3,7 +3,7 @@
 }
 
 .addBookBtn:disabled {
-    background-color: #7c2f2f;
+    background-color: rgb(124, 47, 47);
     border: 1px solid #7c2f2f;
     color: #e6e6e6;
     cursor:default;
