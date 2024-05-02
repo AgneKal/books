@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { LoadingComponent } from '../components/loading/loading.component';
-import { BooksServiseService } from '../services/books-servise.service';
+import { LoadingComponent } from '../loading/loading.component';
+import { BooksServiseService } from '../../services/books-servise.service';
 import { CommonModule } from '@angular/common';
 
 @Component({

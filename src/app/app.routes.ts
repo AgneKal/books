@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { AddBookComponent } from './add-book/add-book.component';
+import { AddBookComponent } from './components/add-book/add-book.component';
 import { ListOfBooksComponent } from './components/list-of-books/list-of-books.component';
 import { EditBookComponent } from './components/edit-book/edit-book.component';
 
