@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Book } from '../models/book';
 import { map, tap } from 'rxjs';
 
@@ -8,13 +8,17 @@ import { map, tap } from 'rxjs';
 })
 export class BooksServiseService {
 
-public books: Book[] = [];
+  public books: Book[] = [];
+  public onBooksCountChange = new EventEmitter();
 
   constructor(private http: HttpClient) { }
 
   public addBook(item: Book) {
   this.books.push(item);
-    return this.http.post("https://books-mybooks-default-rtdb.europe-west1.firebasedatabase.app/books.json", item);
+    return this.http.post("https://books-mybooks-default-rtdb.europe-west1.firebasedatabase.app/books.json", item)
+      .pipe (
+      tap(() => this.onBooksCountChange.emit())
+    );
   }
 
   public loadData() {
@@ -42,5 +46,8 @@ public books: Book[] = [];
 
   public deleteRecord(id:string) {
     return this.http.delete(`https://books-mybooks-default-rtdb.europe-west1.firebasedatabase.app/books/${id}.json`)
+      .pipe (
+        tap(() => this.onBooksCountChange.emit())
+      );
   }
 }

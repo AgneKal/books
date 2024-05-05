@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { LoadingComponent } from '../loading/loading.component';
 import { BooksServiseService } from '../../services/books-servise.service';
 import { Book } from '../../models/book';
+import { ErrorComponent } from '../error/error.component';
 
 @Component({
   selector: 'app-edit-book',
   standalone: true,
-  imports: [FormsModule, CommonModule, LoadingComponent],
+  imports: [FormsModule, CommonModule, LoadingComponent, ErrorComponent],
   templateUrl: './edit-book.component.html',
   styleUrl: './edit-book.component.css'
 })

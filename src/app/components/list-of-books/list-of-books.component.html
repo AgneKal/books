@@ -1,6 +1,6 @@
 <section>
     <app-loading *ngIf="isLoading"></app-loading>
-    <div class="sectionName error" *ngIf="isError">Klaida!</div>
+    <app-error *ngIf="isError" [message]="'Knygų sąrašo užkrauti nepavyko'" (close)="closeError()"></app-error>
     <div class="sectionMainContainer" *ngIf="!isError && !isLoading">
         <div class="sectionName">Knygų sąrašas</div>
         <div class="booksList">

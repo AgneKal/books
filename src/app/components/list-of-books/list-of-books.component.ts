@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { Book } from '../../models/book';
 import { BooksServiseService } from '../../services/books-servise.service';
 import { LoadingComponent } from '../loading/loading.component';
+import { ErrorComponent } from '../error/error.component';
 
 @Component({
   selector: 'app-list-of-books',
   standalone: true,
-  imports: [CommonModule, RouterLink, LoadingComponent],
+  imports: [CommonModule, RouterLink, LoadingComponent, ErrorComponent],
   templateUrl: './list-of-books.component.html',
   styleUrl: './list-of-books.component.css'
 })
@@ -45,5 +46,8 @@ export class ListOfBooksComponent {
         this.loadData();
       })
     }
+  }
+  public closeError() {
+    this.loadData();
   }
 }

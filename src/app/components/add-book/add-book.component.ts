@@ -3,11 +3,12 @@ import { FormsModule } from '@angular/forms';
 import { LoadingComponent } from '../loading/loading.component';
 import { BooksServiseService } from '../../services/books-servise.service';
 import { CommonModule } from '@angular/common';
+import { ErrorComponent } from '../error/error.component';
 
 @Component({
   selector: 'app-add-book',
   standalone: true,
-  imports: [FormsModule, LoadingComponent, CommonModule],
+  imports: [FormsModule, LoadingComponent, CommonModule, ErrorComponent],
   templateUrl: './add-book.component.html',
   styleUrl: './add-book.component.css'
 })
@@ -19,9 +20,9 @@ export class AddBookComponent {
   public isLoading = false;
   public isError = false;
 
-  public constructor (private bookService: BooksServiseService) {
-
+  public constructor(private bookService:BooksServiseService) {
   }
+
   public addBook(){
     if (this.author != null && this.title != null && this.year != null && this.isReaded != null){
       this.isLoading = true;
