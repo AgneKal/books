@@ -5,11 +5,12 @@ import { Book } from '../../models/book';
 import { BooksServiseService } from '../../services/books-servise.service';
 import { LoadingComponent } from '../loading/loading.component';
 import { ErrorComponent } from '../error/error.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-list-of-books',
   standalone: true,
-  imports: [CommonModule, RouterLink, LoadingComponent, ErrorComponent],
+  imports: [CommonModule, RouterLink, LoadingComponent, ErrorComponent, FormsModule],
   templateUrl: './list-of-books.component.html',
   styleUrl: './list-of-books.component.css'
 })

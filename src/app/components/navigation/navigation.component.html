@@ -1,7 +1,8 @@
 <div class="headerContainer">
-    <img src="./assets/images/logo.png" alt="">
     <div class="navigationLinks">
+        <img src="./assets/images/logo.png" alt="" routerLink="/">
         <a class="linkAddBook" aria-current="page" routerLink="books/new">Įtraukti naują knygą</a>
         <a class="linkListOfBooks" aria-current="page" routerLink="books">Peržiūrėti knygų sąrašą</a>
     </div>
+    <button class="btn logoutBtn" *ngIf="isLoggedIn" (click)="onClickLogout()">Atsijungti</button>
 </div>

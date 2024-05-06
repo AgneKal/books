@@ -1,0 +1,17 @@
+<div class="sectionMainContainer">
+    <div class="sectionName">{{ isLoginMode ? 'Prisijungti prie sistemos' : 'Naujo vartotojo registravimas'}}</div>
+    <div class="bookInfo">
+
+        <label for="" class="form-label">El. pašto adresas</label>
+        <input type="text" name="email" class="form-control" [(ngModel)]="email">
+
+
+        <label for="" class="form-label">Slaptažodis</label>
+        <input type="password" name="password" class="form-control" [(ngModel)]="password">
+
+    </div>
+    <div class="btnContainer">
+        <button class="btn" (click)="login()">{{ isLoginMode ? 'Prisijungti' : 'Registruotis'}}</button>
+        <div> <a href="#" class=" float-end" (click)="changeMode()"> {{isLoginMode ? 'Neturi vartotojo? Registruokitės' : 'Jau registruotas? Prisijunkite'}} </a></div>
+    </div>
+</div>

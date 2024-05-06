@@ -1,7 +1,7 @@
 <section>
     <app-loading *ngIf="isLoading"></app-loading>
     <app-error *ngIf="isError" [message]="'Pridėti naujo įrašo nepavyko'"></app-error>
-    <div class=" sectionMainContainer" *ngIf="!isError && !isLoading">
+    <div class="sectionMainContainer" *ngIf="!isError && !isLoading">
         <div class="sectionName">Informacija apie knygą:</div>
         <div class="bookInfo">
             <input type="text" placeholder="Autorius" [(ngModel)]="author">
